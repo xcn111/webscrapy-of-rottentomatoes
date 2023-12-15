@@ -1,0 +1,2 @@
+# webscrapy-of-rottentomatoes
+爬取rottentomatoes网站中的电影评论用于神经网络训练
