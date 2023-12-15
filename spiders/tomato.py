@@ -43,8 +43,12 @@ class TomatoSpider(scrapy.Spider):
             score = item['scoreSentiment']
             # print(quote)
             # print(score)
-            data = {"quote": quote, "score": score}
-            all_data.append(data)
-        file_path = "data.json"
-        with open(file_path, "a") as json_file:
-            json.dump(all_data, json_file)
+        #     data = {"quote": quote, "score": score}
+        #     all_data.append(data)
+        # file_path = "data.json"
+        # with open(file_path, "a") as json_file:
+        #     json.dump(all_data, json_file)
+            yield {
+                "quote": quote,
+                "score": score
+            }
